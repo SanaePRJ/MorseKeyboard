@@ -2,9 +2,7 @@
   Copyright SanaePRJ 2024.
 ------------------------------ */
 
-
 #include <Keyboard.h>
-
 
 #define InputBTN 10
 
@@ -12,11 +10,11 @@
 const uint64_t ShortPressTime = 10;
 const uint64_t LongPressTime  = 200;
 
-const uint64_t WaitTime = 1500;
+const uint64_t WaitTime = 2000;
 
-const char Alphabet[] = "0123456789abcdefghijklmnopqrstuvwxyz.,:?'-()/=+\"@\n\b"; // 文字
+const char Alphabet[] = "0123456789abcdefghijklmnopqrstuvwxyz\n\b.,:?'-()/=+\"@"; // 文字
 
-// MorseCodesのサイズ
+// MorseCodesのサイズ 
 const int MorseCodeSize = 52;
 
 // モールス信号幅
@@ -65,6 +63,11 @@ const int MorseCodes[][MorseWidth] = {
   {0, 0, 2, 1, 2, 2}, // y: -.-- 
   {0, 0, 2, 2, 1, 1}, // z: --..
 
+  // 特殊キー
+  {0, 0, 1, 2, 1, 2}, // \n: .-.-
+  {0, 0, 2, 2, 2, 2}, // \b: ----
+
+  // 記号
   {1, 2, 1, 2, 1, 2}, // .: .-.-.-
   {2, 2, 1, 1, 2, 2}, // ,: --..--
   {2, 2, 2, 1, 1, 1}, // :: ---...
@@ -78,11 +81,7 @@ const int MorseCodes[][MorseWidth] = {
   {0, 1, 2, 1, 2, 1}, // +: .-.-.
   {1, 2, 1, 1, 2, 1}, // ": .-..-.
   {0, 0, 2, 1, 1, 2}, // ×: -..-
-  {1, 2, 2, 1, 2, 1}, // @: .--.-.
-
-  // 特殊キー
-  {0, 0, 1, 2, 1, 2}, // \n: .-.-
-  {0, 0, 2, 2, 2, 2}  // \b: ----
+  {1, 2, 2, 1, 2, 1}  // @: .--.-.
 };
 
 // 短音と長音のパターンに一致するインデックスを返す。
@@ -185,8 +184,11 @@ char GetCharByMorse(){
 
   // インデックスを取得 
   int Index = FindPattern(Pattern);
+  // 
+  if(Index!=-1)
   Serial.printf("Index:%d->%c\n",Index,Alphabet[Index]);
-
+  else 
+  Serial.printf("notfound\n");
   delete Pattern;
 
   // 見つからない場合?を出力
@@ -199,6 +201,7 @@ char GetCharByMorse(){
 
 void setup() {
   pinMode(InputBTN,INPUT_PULLUP);
+
   Keyboard.begin();
 
   Serial.begin(9600);
@@ -207,22 +210,18 @@ void setup() {
 void loop() {
   char C = GetCharByMorse();
 
-  // 特殊文字
-  if(C=='\b'){
-    Keyboard.press(KEY_BACKSPACE);
-    delay(100);
-    Keyboard.release(KEY_BACKSPACE);
+/*
+  if(C=='\n')
+    Keyboard.press(KEY_RETURN); // キーを送信
 
-  }else if(C=='\n'){
-    Keyboard.press(KEY_RETURN);
-    delay(100);
-    Keyboard.release(KEY_RETURN);
+  else if(C=='\b')
+    Keyboard.press(KEY_BACKSPACE); // キーを送信
 
-  // 通常文字
-  }else{
+  else
     Keyboard.press(C); // キーを送信
-    delay(100);
-    Keyboard.release(C);
-
-  }
+  */
+  
+  Keyboard.press(C);
+  delay(100);
+  Keyboard.releaseAll();
 }

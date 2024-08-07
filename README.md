@@ -1,48 +1,48 @@
-# Arduino‚Åƒ‚[ƒ‹ƒXM†ƒL[ƒ{[ƒh‚ðì¬‚·‚é
+# Arduinoï¿½Åƒï¿½ï¿½[ï¿½ï¿½ï¿½Xï¿½Mï¿½ï¿½ï¿½Lï¿½[ï¿½{ï¿½[ï¿½hï¿½ï¿½ï¿½ì¬ï¿½ï¿½ï¿½ï¿½
 
-‚±‚ÌƒvƒƒWƒFƒNƒg‚Å‚ÍAArduinoƒ{[ƒh‚ðŽg—p‚µ‚Äƒ‚[ƒ‹ƒXM†‚ð“ü—Í‚µA‚»‚ê‚ð•¶Žš‚É•ÏŠ·‚µ‚Äƒpƒ\ƒRƒ“‚ÉƒL[ƒ{[ƒh“ü—Í‚Æ‚µ‚Ä‘—M‚·‚é•û–@‚ðà–¾‚µ‚Ü‚·BƒGƒ“ƒ^[ƒL[‚âƒoƒbƒNƒXƒy[ƒXƒL[‚È‚Ç‚Ì“ÁŽê•¶Žš‚àƒTƒ|[ƒg‚µ‚Ä‚¢‚Ü‚·B
+ï¿½ï¿½ï¿½Ìƒvï¿½ï¿½ï¿½Wï¿½Fï¿½Nï¿½gï¿½Å‚ÍAArduinoï¿½{ï¿½[ï¿½hï¿½ï¿½ï¿½gï¿½pï¿½ï¿½ï¿½Äƒï¿½ï¿½[ï¿½ï¿½ï¿½Xï¿½Mï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ð•¶Žï¿½ï¿½É•ÏŠï¿½ï¿½ï¿½ï¿½Äƒpï¿½\ï¿½Rï¿½ï¿½ï¿½ÉƒLï¿½[ï¿½{ï¿½[ï¿½hï¿½ï¿½ï¿½Í‚Æ‚ï¿½ï¿½Ä‘ï¿½ï¿½Mï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½Gï¿½ï¿½ï¿½^ï¿½[ï¿½Lï¿½[ï¿½ï¿½oï¿½bï¿½Nï¿½Xï¿½yï¿½[ï¿½Xï¿½Lï¿½[ï¿½È‚Ç‚Ì“ï¿½ï¿½ê•¶ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½|ï¿½[ï¿½gï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½B
 
 WebSite: http://sanae.starfree.jp  
 Author: SanaeProject
 
-## ƒn[ƒhƒEƒFƒA—vŒ
+## ï¿½nï¿½[ï¿½hï¿½Eï¿½Fï¿½Aï¿½vï¿½ï¿½
 
-- Arduinoƒ{[ƒhi—áFArduino Unoj
-- ƒvƒbƒVƒ…ƒ{ƒ^ƒ“
-- ’ïRŠíi„§F10kƒ¶j
-- ƒuƒŒƒbƒhƒ{[ƒh‚ÆƒWƒƒƒ“ƒpƒƒCƒ„[
+- Arduinoï¿½{ï¿½[ï¿½hï¿½iï¿½ï¿½FArduino Unoï¿½j
+- ï¿½vï¿½bï¿½Vï¿½ï¿½ï¿½{ï¿½^ï¿½ï¿½
+- ï¿½ï¿½Rï¿½ï¿½iï¿½ï¿½ï¿½ï¿½ï¿½F10kï¿½ï¿½ï¿½j
+- ï¿½uï¿½ï¿½ï¿½bï¿½hï¿½{ï¿½[ï¿½hï¿½ÆƒWï¿½ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½[
 
-## ƒ\ƒtƒgƒEƒFƒA—vŒ
+## ï¿½\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½vï¿½ï¿½
 
 - Arduino IDE
-- Keyboardƒ‰ƒCƒuƒ‰ƒŠ
+- Keyboardï¿½ï¿½ï¿½Cï¿½uï¿½ï¿½ï¿½ï¿½
 
-## ”zü
+## ï¿½zï¿½ï¿½
 
-ƒvƒbƒVƒ…ƒ{ƒ^ƒ“‚ðArduino‚ÌƒfƒWƒ^ƒ‹ƒsƒ“10‚ÉÚ‘±‚µ‚Ü‚·Bƒvƒ‹ƒAƒbƒv’ïRi10kƒ¶j‚ðŽg—p‚µ‚Äƒ{ƒ^ƒ“‚ðƒOƒ‰ƒ“ƒh‚ÉÚ‘±‚µ‚Ä‚­‚¾‚³‚¢B
+ï¿½vï¿½bï¿½Vï¿½ï¿½ï¿½{ï¿½^ï¿½ï¿½ï¿½ï¿½Arduinoï¿½Ìƒfï¿½Wï¿½^ï¿½ï¿½ï¿½sï¿½ï¿½10ï¿½ÉÚ‘ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½vï¿½ï¿½ï¿½Aï¿½bï¿½vï¿½ï¿½Rï¿½i10kï¿½ï¿½ï¿½jï¿½ï¿½ï¿½gï¿½pï¿½ï¿½ï¿½Äƒ{ï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½hï¿½ÉÚ‘ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½B
 
-## ƒCƒ“ƒXƒg[ƒ‹Žè‡
+## ï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½è‡
 
-1. **ƒŠƒ|ƒWƒgƒŠ‚ÌƒNƒ[ƒ“**: ƒŠƒ|ƒWƒgƒŠ‚ðƒNƒ[ƒ“‚Ü‚½‚Íƒ_ƒEƒ“ƒ[ƒh‚µ‚ÄAƒ[ƒJƒ‹ƒ}ƒVƒ“‚É•Û‘¶‚µ‚Ü‚·B
+1. **ï¿½ï¿½ï¿½|ï¿½Wï¿½gï¿½ï¿½ï¿½ÌƒNï¿½ï¿½ï¿½[ï¿½ï¿½**: ï¿½ï¿½ï¿½|ï¿½Wï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Íƒ_ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ÄAï¿½ï¿½ï¿½[ï¿½Jï¿½ï¿½ï¿½}ï¿½Vï¿½ï¿½ï¿½É•Û‘ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-2. **ƒXƒPƒbƒ`‚ðŠJ‚­**: Arduino IDE‚Å`.ino`ƒtƒ@ƒCƒ‹‚ðŠJ‚«‚Ü‚·B
+2. **ï¿½Xï¿½Pï¿½bï¿½`ï¿½ï¿½ï¿½Jï¿½ï¿½**: Arduino IDEï¿½ï¿½`.ino`ï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½Jï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-3. **Keyboardƒ‰ƒCƒuƒ‰ƒŠ‚ÌƒCƒ“ƒXƒg[ƒ‹**: `Keyboard`ƒ‰ƒCƒuƒ‰ƒŠ‚ªƒCƒ“ƒXƒg[ƒ‹‚³‚ê‚Ä‚¢‚È‚¢ê‡‚ÍAArduino IDE‚Ìƒ‰ƒCƒuƒ‰ƒŠƒ}ƒl[ƒWƒƒ[‚©‚çƒCƒ“ƒXƒg[ƒ‹‚µ‚Ü‚·B
+3. **Keyboardï¿½ï¿½ï¿½Cï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ÌƒCï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½**: `Keyboard`ï¿½ï¿½ï¿½Cï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½ê‡ï¿½ÍAArduino IDEï¿½Ìƒï¿½ï¿½Cï¿½uï¿½ï¿½ï¿½ï¿½ï¿½}ï¿½lï¿½[ï¿½Wï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-4. **ƒR[ƒh‚ðƒAƒbƒvƒ[ƒh**: Arduino‚ðƒRƒ“ƒsƒ…[ƒ^‚ÉÚ‘±‚µAƒR[ƒh‚ðƒAƒbƒvƒ[ƒh‚µ‚Ü‚·B
+4. **ï¿½Rï¿½[ï¿½hï¿½ï¿½ï¿½Aï¿½bï¿½vï¿½ï¿½ï¿½[ï¿½h**: Arduinoï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½sï¿½ï¿½ï¿½[ï¿½^ï¿½ÉÚ‘ï¿½ï¿½ï¿½ï¿½Aï¿½Rï¿½[ï¿½hï¿½ï¿½ï¿½Aï¿½bï¿½vï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-## Žg—p•û–@
+## ï¿½gï¿½pï¿½ï¿½ï¿½@
 
-ƒvƒbƒVƒ…ƒ{ƒ^ƒ“‚ð‰Ÿ‚µ‚Äƒ‚[ƒ‹ƒXM†‚ð“ü—Í‚µ‚Ü‚·B
-- ’Z‰Ÿ‚µiƒhƒbƒgj: 1
-- ’·‰Ÿ‚µiƒ_ƒbƒVƒ…j: 2
+ï¿½vï¿½bï¿½Vï¿½ï¿½ï¿½{ï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äƒï¿½ï¿½[ï¿½ï¿½ï¿½Xï¿½Mï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½Ü‚ï¿½ï¿½B
+- ï¿½Zï¿½ï¿½ï¿½ï¿½ï¿½iï¿½hï¿½bï¿½gï¿½j: 1
+- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½_ï¿½bï¿½Vï¿½ï¿½ï¿½j: 2
 
-•¶Žš‚Ì“ü—Í‚ªŠ®—¹‚µ‚½‚çA1.5•bi1500ƒ~ƒŠ•bj‘Ò‚Â‚ÆA•¶Žš‚ÌI‚í‚è‚ªŒŸo‚³‚ê‚Ü‚·B
+ï¿½ï¿½ï¿½ï¿½ï¿½Ì“ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½A1.5ï¿½bï¿½i1500ï¿½~ï¿½ï¿½ï¿½bï¿½jï¿½Ò‚Â‚ÆAï¿½ï¿½ï¿½ï¿½ï¿½ÌIï¿½ï¿½è‚ªï¿½ï¿½ï¿½oï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-ƒ‚[ƒ‹ƒXM†‚ª•¶Žš‚É•ÏŠ·‚³‚êAÚ‘±‚³‚ê‚½ƒRƒ“ƒsƒ…[ƒ^‚ÉƒL[ƒ{[ƒh“ü—Í‚Æ‚µ‚Ä‘—M‚³‚ê‚Ü‚·BƒGƒ“ƒ^[ƒL[‚âƒoƒbƒNƒXƒy[ƒXƒL[‚È‚Ç‚Ì“ÁŽê•¶Žš‚àƒTƒ|[ƒg‚µ‚Ä‚¢‚Ü‚·B
+ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½Xï¿½Mï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É•ÏŠï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Ú‘ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½Rï¿½ï¿½ï¿½sï¿½ï¿½ï¿½[ï¿½^ï¿½ÉƒLï¿½[ï¿½{ï¿½[ï¿½hï¿½ï¿½ï¿½Í‚Æ‚ï¿½ï¿½Ä‘ï¿½ï¿½Mï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½Gï¿½ï¿½ï¿½^ï¿½[ï¿½Lï¿½[ï¿½ï¿½oï¿½bï¿½Nï¿½Xï¿½yï¿½[ï¿½Xï¿½Lï¿½[ï¿½È‚Ç‚Ì“ï¿½ï¿½ê•¶ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½|ï¿½[ï¿½gï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-## ƒ‚[ƒ‹ƒXM†
-### ”Žš
+## ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½Xï¿½Mï¿½ï¿½
+### ï¿½ï¿½ï¿½ï¿½
 - `0: -----`
 - `1: ----.`
 - `2: ---..`
@@ -54,7 +54,7 @@ Author: SanaeProject
 - `8: ..---`
 - `9: .----`
 
-### ƒAƒ‹ƒtƒ@ƒxƒbƒg a-z
+### ï¿½Aï¿½ï¿½ï¿½tï¿½@ï¿½xï¿½bï¿½g a-z
 - `a: .-`
 - `b: -...`
 - `c: -.-.`
@@ -82,7 +82,7 @@ Author: SanaeProject
 - `y: -.--`
 - `z: --..`
 
-### “ÁŽê‹L†
+### ï¿½ï¿½ï¿½ï¿½Lï¿½ï¿½
 - `.: .-.-.-`
 - `, : --..--`
 - `:: ---...`
@@ -95,9 +95,9 @@ Author: SanaeProject
 - `= : -...-`
 - `+: .-.-.`
 - `": .-..-.`
-- `~: -..-`
+- `ï¿½~: -..-`
 - `@: .--.-`
 
-### “ÁŽêƒL[
+### ï¿½ï¿½ï¿½ï¿½Lï¿½[
 - `\n: .-.-`
 - `\b: ----`
