@@ -7,12 +7,15 @@
 #define InputBTN 10
 
 
+// ここら辺は好きにいじってください。
 const uint64_t ShortPressTime = 10;
 const uint64_t LongPressTime  = 200;
 
-const uint64_t WaitTime = 2000;
+const uint64_t WaitTime = 500;
 
-const char Alphabet[] = "0123456789abcdefghijklmnopqrstuvwxyz \n\b.,:?'-()/=+\"@"; // 文字
+
+// アルファベット:MorseCodesと対応させてください。
+const char Alphabet[] = "0123456789abcdefghijklmnopqrstuvwxyz \n\b.,:?'-()/=+\"@";
 
 // MorseCodesのサイズ 
 const int MorseCodeSize = 52;
@@ -121,7 +124,13 @@ uint8_t GetDotDash(){
 
   // 押された時間を取得する。
   const uint64_t PressStartTime = millis();
-  while(digitalRead(InputBTN)==LOW);
+
+  // 押されている
+  while(digitalRead(InputBTN)==LOW){
+    if(LongPressTime < (millis()-PressStartTime))
+      digitalWrite(LED_BUILTIN,LOW); // 長音であることを知らせる。
+  };
+  digitalWrite(LED_BUILTIN,HIGH); // 点灯削除
 
   // 離されたらPIN_LED_RXLを消灯する。
   digitalWrite(PIN_LED_RXL,HIGH);
@@ -209,7 +218,10 @@ char GetCharByMorse(){
 
 void setup() {
   pinMode(PIN_LED_RXL, OUTPUT);
+  pinMode(LED_BUILTIN,OUTPUT);
+
   digitalWrite(PIN_LED_RXL,HIGH);
+  digitalWrite(LED_BUILTIN,HIGH);
 
   pinMode(InputBTN,INPUT_PULLUP);  
 
@@ -217,7 +229,6 @@ void setup() {
 
   Serial.begin(9600);
 }
-// abcdefghijklmnma
 
 void loop() {
   Keyboard.press(GetCharByMorse());
