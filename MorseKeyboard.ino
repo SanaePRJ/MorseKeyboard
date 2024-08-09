@@ -10,7 +10,7 @@
 #define InputBTN     10
 
 // 長音対応ボタンない場合は -1 にしてください。
-#define InputLongBTN -1
+#define InputLongBTN 9
 
 
 // ここら辺は好きにいじってください。chattering
@@ -129,7 +129,7 @@ uint8_t GetDotDash(){
       digitalWrite(LED_BUILTIN,LOW); // 長音であることを知らせる。
       
       // 長押し時間分停止
-      delay(InputLongBTN);
+      delay(LongPressTime);
 
       digitalWrite(LED_BUILTIN,HIGH); // 点灯解除
 
