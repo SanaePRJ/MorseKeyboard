@@ -2,16 +2,22 @@
   Copyright SanaePRJ 2024.
 ------------------------------ */
 
+
 #include <Keyboard.h>
 
-#define InputBTN 10
+
+// 短音・長音対応ボタン
+#define InputBTN     10
+
+// 長音対応ボタンない場合は -1 にしてください。
+#define InputLongBTN -1
 
 
-// ここら辺は好きにいじってください。
-const uint64_t ShortPressTime = 10;
-const uint64_t LongPressTime  = 200;
+// ここら辺は好きにいじってください。chattering
+const uint64_t ChatteringTime = 10;
+const uint64_t LongPressTime  = 150;
 
-const uint64_t WaitTime = 500;
+const uint64_t Timeout = 300;
 
 
 // アルファベット:MorseCodesと対応させてください。
@@ -113,9 +119,27 @@ int FindPattern(const int ArgInPattern[MorseWidth]) {
 uint8_t GetDotDash(){
   
   // タイムアウトチェック
-  const uint64_t StartWaitTime = millis();
+  const uint64_t StartTimeout = millis();
   while(digitalRead(InputBTN)!=LOW){
-    if(WaitTime < (millis() - StartWaitTime))
+
+#if InputLongBTN != -1
+
+    // 長音キー
+    if(digitalRead(InputLongBTN) == LOW){
+      digitalWrite(LED_BUILTIN,LOW); // 長音であることを知らせる。
+      
+      // 長押し時間分停止
+      delay(InputLongBTN);
+
+      digitalWrite(LED_BUILTIN,HIGH); // 点灯解除
+
+      return 2;
+    }
+
+#endif
+
+    // 押されていない時間が Timeout を超えた場合タイムアウトとし文字の終端とする。
+    if(Timeout < (millis() - StartTimeout))
       return 3; // timeout
   };
 
@@ -129,8 +153,8 @@ uint8_t GetDotDash(){
   while(digitalRead(InputBTN)==LOW){
     if(LongPressTime < (millis()-PressStartTime))
       digitalWrite(LED_BUILTIN,LOW); // 長音であることを知らせる。
-  };
-  digitalWrite(LED_BUILTIN,HIGH); // 点灯削除
+  }
+  digitalWrite(LED_BUILTIN,HIGH); // 点灯解除
 
   // 離されたらPIN_LED_RXLを消灯する。
   digitalWrite(PIN_LED_RXL,HIGH);
@@ -142,7 +166,7 @@ uint8_t GetDotDash(){
   const uint64_t Duration = PressEndTime - PressStartTime;
 
   // チャタリング防止
-  if(Duration < ShortPressTime)
+  if(Duration < ChatteringTime)
     return 0; // none
 
   // 短音
@@ -175,10 +199,10 @@ char GetCharByMorse(){
   for(int i = 0;i<MorseWidth;i++){
     uint8_t get = 0;
 
-    // 0 以外の時
+    // 0 の時無視
     while((get=GetDotDash())==0);
 
-    // タイムアウトしているが0回目の時は無視する。
+    // タイムアウトしているが 0 回目の時は無視する。
     if(get==3 && i == 0){
       i--;
       continue;
@@ -193,7 +217,7 @@ char GetCharByMorse(){
   // {1, 2, 0, 0, 0} を {0, 0, 0, 1, 2}にする。
   while(Pattern[MorseWidth-1]==0)
     shiftRight(Pattern,MorseWidth);
-
+  
   // デバッグ用出力
   for(int i = 0;i<MorseWidth;i++)
     Serial.printf("%d",Pattern[i]);
@@ -201,11 +225,6 @@ char GetCharByMorse(){
 
   // インデックスを取得 
   int Index = FindPattern(Pattern);
-  // 
-  if(Index!=-1)
-  Serial.printf("Index:%d->%c\n",Index,Alphabet[Index]);
-  else 
-  Serial.printf("notfound\n");
   delete Pattern;
 
   // 見つからない場合?を出力
@@ -216,22 +235,38 @@ char GetCharByMorse(){
   return Alphabet[Index];
 }
 
+
 void setup() {
-  pinMode(PIN_LED_RXL, OUTPUT);
-  pinMode(LED_BUILTIN,OUTPUT);
 
-  digitalWrite(PIN_LED_RXL,HIGH);
-  digitalWrite(LED_BUILTIN,HIGH);
+  pinMode(PIN_LED_RXL, OUTPUT); // ボタンが押されていることを示す。
+  pinMode(LED_BUILTIN, OUTPUT); // 長音であることを示す。
 
-  pinMode(InputBTN,INPUT_PULLUP);  
+  // LEDを消灯
+  digitalWrite(PIN_LED_RXL,HIGH); 
+  digitalWrite(LED_BUILTIN,HIGH); 
 
+  // 長音・短音,長音ボタンのpinModeをINPUT_PULLUPにする。
+  pinMode(InputBTN,INPUT_PULLUP);
+
+#if InputLongBTN != -1
+
+  pinMode(InputLongBTN,INPUT_PULLUP);  
+
+#endif
+
+  // Keyboardを初期化
   Keyboard.begin();
 
+  // デバッグ用
   Serial.begin(9600);
 }
 
 void loop() {
+  // モールス信号から文字へ変換しキーボードへ出力
   Keyboard.press(GetCharByMorse());
+
   delay(100);
+
+  // 離す
   Keyboard.releaseAll();
 }
